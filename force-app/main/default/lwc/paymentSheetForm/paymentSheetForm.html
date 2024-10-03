@@ -1,0 +1,11 @@
+<template lwc:render-mode="light">
+    <div
+        sf-payments-checkout
+        lwc:ref="sfPaymentsCheckout"></div>
+
+    <div lwc:if={showEmptyState}>
+        <c-payment-empty-state
+            empty-state-title={emptyStateTitle}
+            empty-state-description={emptyStateDescription}></c-payment-empty-state>
+    </div>
+</template>
