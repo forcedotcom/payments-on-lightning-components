@@ -49,3 +49,20 @@ The main objective of this project is to provide reference payments components f
         ```shell
         sf org open
         ```
+
+
+## Components
+
+| Name/FQN                                                                      | Description                                                    | Specification |
+| :---------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------- |
+| [`paymentSheetForm`](force-app/main/default/lwc/paymentSheetForm)                 | Displays a radio button list of payment options for a payer to use. Processes payments.                     | [`Payment Sheet Specs`](force-app/main/default/lwc/paymentSheetForm/README.md)             |
+
+---
+
+## Resources
+
+-   [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+-   [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+-   [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+-   [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+-   [Salesforce Payments Connect APIs](https://developer.salesforce.com/docs/atlas.en-us.chatterapi.meta/chatterapi/connect_resources_payments.htm)
