@@ -30,7 +30,7 @@ The main objective of this project is to provide reference payments components f
 3.  Clone the `payments-on-lightning-components` repository:
 
     ```shell
-    git clone https://github.com/forcedot/payments-on-lightning-components.git
+    git clone https://github.com/forcedotcom/payments-on-lightning-components.git
     cd payments-on-lightning-components
     ```
 
