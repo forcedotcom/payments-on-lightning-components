@@ -71,6 +71,9 @@ export default class PaymentSheetForm extends LightningElement {
     @api
     createIntentFunction;
 
+    @api
+    reportErrorsFunction;
+
     hasRendered = false;
 
     sfpInitialized = false;
@@ -140,7 +143,9 @@ export default class PaymentSheetForm extends LightningElement {
                 if (!globalThis.SFPayments) {
                     await loadScript(this, SF_PAYMENTS_SDK_URL);
                 }
-                this.sfp = new globalThis.SFPayments();
+                this.sfp = new globalThis.SFPayments({
+                    report: this.reportErrorsFunction,
+                });
                 const el = this.refs?.sfPaymentsCheckout;
                 while (el?.firstChild) {
                     el.removeChild(el.firstChild);
@@ -167,7 +172,7 @@ export default class PaymentSheetForm extends LightningElement {
                 const config = {
                     labels: labels,
                     theme: buildTheme(el),
-                    actions: this.createIntentFunction && {
+                    actions: {
                         createIntentFunction: this.createIntentFunction,
                     },
                     options: {

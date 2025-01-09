@@ -1,6 +1,6 @@
 const SF_PAYMENTS_PRODUCTION_HOST = 'https://payments.salesforce.com';
 const SF_PAYMENTS_DEVELOPMENT_HOST = 'https://payments.salesforce.com';
-const SF_PAYMENTS_ACTIVE_HOST = SF_PAYMENTS_DEVELOPMENT_HOST;
+const SF_PAYMENTS_ACTIVE_HOST = SF_PAYMENTS_PRODUCTION_HOST;
 const SF_PAYMENTS_METADATA_URL = SF_PAYMENTS_ACTIVE_HOST + '/metadata/v5.json';
 
 export const SF_PAYMENTS_SDK_URL = SF_PAYMENTS_ACTIVE_HOST + '/v5/sfp.js';
@@ -649,4 +649,8 @@ export function createSavedPaymentMethodComparator(defaultPaymentMethodType) {
         }
         return item1Type < item2Type ? -1 : 1;
     };
+}
+
+export function getIconPath(iconName) {
+    return `${SF_PAYMENTS_ACTIVE_HOST}/icons/${iconName}.svg`;
 }
